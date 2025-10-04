@@ -10,7 +10,7 @@ Key Features:
 - ISO 27001 control domain compliance mapping (Annex A.5-A.18)
 - Professional HTML report with color-coded compliance status
 - Actionable recommendations prioritized by timeline    
-The report is saved to the desktop with timestamped filename and can be opened automatically in the default browser.
+The report is saved as .html to the desktop with timestamped filename and can be opened with your desired browser.
 .NOTES
 Author: Claudio Orlando, CForce-IT
 Website: https://serverengine.co
