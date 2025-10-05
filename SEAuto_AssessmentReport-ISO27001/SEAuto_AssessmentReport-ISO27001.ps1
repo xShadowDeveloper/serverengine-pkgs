@@ -26,6 +26,13 @@ or substantial portions of the Script.
 # ISO27001_Assessment_Report.ps1
 # Generates an ISO 27001 compliance assessment report
 
+$isadm = ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
+if (-not $isadm) {
+    Write-Host "<WRITE-LOG = ""*Please run this script as Administrator.*"">"
+    Write-Error "Warning: Not running as Administrator."
+    exit 1 
+}
+
 # Function to create HTML report content
 function Get-ISO27001ReportHTML {
     $reportDate = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
