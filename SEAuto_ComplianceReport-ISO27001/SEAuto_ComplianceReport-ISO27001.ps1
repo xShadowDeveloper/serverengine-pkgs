@@ -10,7 +10,16 @@ Key Features:
 - Comprehensive security controls assessment
 - Professional audit-ready reporting
 .NOTES
-Author: Enterprise Security Team
+Author: Claudio Orlando, CForce-IT
+Website: https://serverengine.co
+License: MIT License
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this script, to deal in the Script without restriction, including without limitation
+the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Script, and to permit persons to whom the Script is furnished to do so,
+subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all copies
+or substantial portions of the Script.
 Version: 3.0 - ISO 27001:2022 Compliant
 #>
 
