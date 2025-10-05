@@ -16,6 +16,13 @@ The above copyright notice and this permission notice shall be included in all c
 or substantial portions of the Script.
 #>
 
+$isadm = ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
+if (-not $isadm) {
+    Write-Host "<WRITE-LOG = ""*Please run this script as Administrator.*"">"
+    Write-Error "Warning: Not running as Administrator."
+    exit 1 
+}
+
 $CriticalServices = @(
     "Spooler",
     "wuauserv",
