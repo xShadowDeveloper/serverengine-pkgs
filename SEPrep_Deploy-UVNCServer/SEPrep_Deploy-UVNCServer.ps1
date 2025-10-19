@@ -4,8 +4,7 @@ Install and configure UltraVNC Server for ServerEngine Management
 .DESCRIPTION
 This PowerShell script automatically checks for and installs UltraVNC Server if missing, 
 performing a silent installation with pre-configured security settings, MS Logon authentication, 
-and a firewall rule. It then ensures the service is configured to start automatically by placing 
-a shortcut in the Windows Startup folder.
+and a firewall rule.
 .NOTES
 Author: Claudio Orlando, CForce-IT
 Website: https://serverengine.co
@@ -155,16 +154,6 @@ Write-Host "Config file deployed to: $env:ProgramData\UltraVNC\ultravnc.ini"
 
 # Path to winvnc.exe
 $winvnc = "C:\Program Files\uvnc bvba\UltraVNC\winvnc.exe"
-
-# Path to Startup folder
-$startup = [System.Environment]::GetFolderPath('Startup')
-
-# Create shortcut
-$WshShell = New-Object -ComObject WScript.Shell
-$Shortcut = $WshShell.CreateShortcut("$startup\UltraVNC.lnk")
-$Shortcut.TargetPath = $winvnc
-$Shortcut.WorkingDirectory = (Split-Path $winvnc)
-$Shortcut.Save()
 
 Start-Process $winvnc
 Write-Host "<WRITE-LOG = ""*UVNC Server installation completed successfully.*"">"
