@@ -101,4 +101,3 @@ if (-not (Get-NetFirewallRule -Name "WINRM-HTTPS-In-TCP" -ErrorAction SilentlyCo
 Write-Host "WinRM HTTPS successfully configured"
 Write-Host "Certificate Thumbprint: $($cert.Thumbprint)"
 Write-Host "Certificate Expires: $($cert.NotAfter.ToString('yyyy-MM-dd'))"
-Write-Host "<WRITE-LOG = ""*PowerShell Remoting successfully configured.*"">"
