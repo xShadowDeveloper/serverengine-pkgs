@@ -160,9 +160,9 @@ Write-Host "<WRITE-LOG = ""*UVNC Server installation completed successfully.*"">
 
 
 }else{
-	if (Test-Path "C:\Program Files\uvnc bvba\UltraVNC\winvnc.exe") {
+    if (Test-Path "C:\Program Files\uvnc bvba\UltraVNC\winvnc.exe") {
         Write-Host "<WRITE-LOG = ""*UVNC Server is already installed.*"">"
-	}
+    }
 
 }
 
