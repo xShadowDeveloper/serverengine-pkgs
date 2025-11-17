@@ -16,7 +16,7 @@ The above copyright notice and this permission notice shall be included in all c
 or substantial portions of the Script.
 #>
 
-$Threshold = 70  # Disk usage % limit
+$Threshold = 50  # Disk usage % limit
 $Drives = Get-PSDrive -PSProvider 'FileSystem'
 
 foreach ($Drive in $Drives) {
